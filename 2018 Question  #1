@@ -4,12 +4,12 @@ class Solution:
         if d2 == d3:
             pass
 
-            if d1 == '8' or d1 == '9' and d2 == '8' or d2 == '9':
-                print("Answer")
-                return True
+            if d1 == '8' or d1 == '9' and d4 == '8' or d4 == '9':
+                print("ignore")
+            else:
+                print("answer")
         else:
-            print("Ignore")
-            return False
+            print("answer")
 
 d1 = input("> ")
 d2 = input("> ")
