@@ -1,6 +1,6 @@
 # Alec Dewulf
 # "Party Invitation" 2014 J4
-# This one was really difficult and I probably solved it inefficiently
+# This one was kinda difficult and I probably solved it really inefficiently
 # December 21, 2019
 
 num_friends = int(input())
