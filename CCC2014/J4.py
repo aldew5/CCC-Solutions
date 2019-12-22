@@ -15,14 +15,12 @@ def remove(duplicate):
     return final_list
 
 friends_l = []
-
 # give the friends numbers
 for i in range(1, num_friends + 1):
     friends_l.append(i)
 
 m = []
 x = 0
-
 # getting user input for the intervals to take out stored in m
 while x < rounds:
     m.append(int(input()))
@@ -32,7 +30,6 @@ while x < rounds:
 y = 0
 index = -1
 correct = []
-
 # find the correct indices for each of the intervals in m index starts at -1
 # because the index of a list starts at 0
 for i in m:
@@ -41,21 +38,18 @@ for i in m:
         correct.append(index)
 
         if correct[-1] > len(friends_l)- 1:
-            correct.pop(-1)
-            
+            correct.pop(-1)      
     # remove the duplicates and reverse the list so it doesn't mess with the
     # indices
     answer = remove(correct)
     answer.sort(reverse=True)
-
+    
     # delete the correct values
     for values in answer:
         del friends_l[values]
-
     # reset the index and clear correct
     index = -1
     correct.clear()
-
 
 # printing the answer
 for i in friends_l:
