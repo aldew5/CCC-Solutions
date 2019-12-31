@@ -1,6 +1,8 @@
 # Alec Dewulf
 # "Arrival Time" 2016 J4
 # December 31, 2019
+# Made it harder for myself by staying in hours. A better idea would be to use
+# minutes and then convert back for the output.
 
 d_time = list(input())
 del d_time[2]
