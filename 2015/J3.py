@@ -29,6 +29,7 @@ second_chars = []
 # difference between them and the next vowel
 for i in c_indices:
     while i < len(alph):
+        # checking to make sure dif is still an index of alph
         if i + n < len(alph):
             dif = i + n
             
@@ -37,7 +38,7 @@ for i in c_indices:
              sec = alph[dif]
              second_chars.append(sec)
              break
-            
+        # checking if there are i numbers to the left of n   
         if i - n >= 0:
             dif = i - n
             
@@ -76,3 +77,4 @@ ans = ''
 for i in groups:
     ans = ans + i
 print(ans)
+     
