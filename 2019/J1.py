@@ -16,3 +16,5 @@ if apples_points > bananas_points:
     print("A")
 elif bananas_points > apples_points:
     print("B")
+else:
+    print("T")
