@@ -1,37 +1,47 @@
-# Alec Deuwlf
-# Solution to CCC 2018 J3
-# This was the hardest yet. Included comments to help explain
+# Alec Dewulf
+# "Cold Compress" J3 2019
 
-def solution():
-    dis = input("> ")
-    d = dis.split()
 
-    # converting all the elements in d to integers
-    for i in range(0,4):
-        d[i] = int(d[i])
+num_lines = int(input())
 
-    # first element in first row of cities is 0
-    cities = [0]
+# define variables
+rows = []
+counter = 0
+row = ''
 
-    # creates the first row stored in c
-    for i in range(0,4):
-         # adds distances to accumulating sums
-         cities.append(cities[i] + d[i])
+x = 0
+# get new lines until they've all been compressed
+while x < num_lines:
+    line = input()
+    y = 0
+    row = ''
 
-    # goes through all ins 0 - 5 for all ints 0-5
-    for x in range(0,5):
-        l = []
-        for j in range(0,5):
-            # when x = 0 the first row is formed...
-            distance = cities[j] - cities[x]
+    # loop through the line
+    while y < len(line):
+        # if there is no index after line[y] add the new symbol and append
+        if y + 1 == len(line):
+            counter += 1
+            row += str(counter) + ' ' + line[y] + ' '
+            rows.append(row)
 
-            # so that there aren't negative values
-            if distance < 0:
-                distance *= -1
+            counter = 0
+            y += 1
+
+        # if the next thing is different add the previous data
+        # onto the row
+        elif line[y] != line[y + 1]:
+            counter += 1
+            row += str(counter) + ' ' + line[y] + ' ' 
             
-            l.append(distance)
+            counter = 0
+            y += 1
 
-        print(l)
+        # if the next symbol is the same continue 
+        elif line[y] == line[y + 1]:
+            counter += 1
+            y += 1
+    x += 1
 
-# testing
-solution()
+# print out results
+for r in rows:
+    print(r)
