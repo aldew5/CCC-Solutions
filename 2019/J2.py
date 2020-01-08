@@ -1,19 +1,20 @@
 # Alec Dewulf
-# Solution to CCC  2019 J2
+# "Time to Decompress" J2 2019
 
-length = int(input("> "))
-message = []
+num_lines = int(input())
+all_messages = []
 
 x = 0
-while x < length:
-    symbol = input("> ").split()
-    multiple = int(symbol[0])
-    row = symbol[1] * multiple
-    message.append(row)
+# get input for the number of lines create the message
+# then append it
+while x < num_lines:
+    line = input().split()
+    message = int(line[0]) * line[1]
+    all_messages.append(message)
 
     x += 1
 
-y = 0
-while y < length:
-    print(message[y])
-    y += 1
+# print the messages
+for x in all_messages:
+    print(x)
+
