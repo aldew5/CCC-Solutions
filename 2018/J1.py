@@ -1,22 +1,19 @@
-# This is the solution to problem 1 in CCC 2018
-class Solution:
-    def if_telemarketer(self, d1, d2, d3, d4):
-        if d2 == d3:
-            pass
+# Alec Dewulf
+# 2018 J1 "Telemarketer or not?"
+# February 10, 2020
 
-            if d1 == '8' or d1 == '9' and d4 == '8' or d4 == '9':
-                print("ignore")
-            else:
-                print("answer")
+n1 = int(input())
+n2 = int(input())
+n3 = int(input())
+n4 = int(input())
+
+if n1 == 8 or n1 == 9:
+    if n4 == 8 or n4 == 9:
+        if n3 == n2:
+            print('ignore')
         else:
-            print("answer")
-
-d1 = input("> ")
-d2 = input("> ")
-d3 = input("> ")
-d4 = input("> ")
-
-
-# testing her out
-person = Solution()
-person.if_telemarketer(d1, d2, d3, d4)
+            print('answer')
+    else:
+        print('answer')
+else:
+    print('answer')
