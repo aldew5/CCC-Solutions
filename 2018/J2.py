@@ -1,22 +1,17 @@
-# This is my solution to CCC 2018 problem #2
-class Solution:
-    def check_cars(self, length, string1, string2):
-        # splitting the strings into lists
-        list1 = list(string1)
-        list2 = list(string2)
+# Alec Dewulf
+# 2018 J1 "Occupy Parking"
+# February 10, 2020
 
-        x = 0
-        y = 0
-        while x < length:
-            if list2[x] == list1[x] and list1[x] == 'C' and list2[x] == 'C':
-                y += 1
-            x += 1
-        print(y)
+num_spots = int(input())
+today = list(input())
+yesterday = list(input())
 
-length = int(input("> "))
-string1 = input("> ")
-string2 = input("> ")
+num_occupied = 0
+x = 0
+while x < num_spots:
+    if today[x] == yesterday[x] and today[x] == 'C':
+        num_occupied += 1
 
-# testing it out
-day = Solution()
-day.check_cars(length, string1, string2)
+    x += 1
+
+print(num_occupied)
