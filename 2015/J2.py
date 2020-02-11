@@ -3,32 +3,35 @@
 # January 4, 2020
 
 
-"""
-This problem appears easy until you consider faces may appear in the
-same index.  The solution is to split up the indices with
-faces(removoing the colon) so that if they were part of the same index
-they aren't anymore and can be counted properly
-
-"""
-
 message = input().split()
 
 num_happy = 0
 num_sad = 0
-for c in message:
-    if ':-)' in c:
-        happy_list = c.split(':')
-        
-        for h in happy_list:
-            if '-)' in h:
-                num_happy += 1
-                
-    elif ':-(' in c:
-        sad_list = c.split(":")
-        
-        for s in sad_list:
-            if '-(' in s:
-                num_sad += 1
+clean_message = []
 
-print(num_happy, num_sad)
+# separating each face into a separate index
+for c in message:
+    clean = c.split(':')
+
+    sent = ' '
+    # create a string of the elements of clean
+    for i in clean:
+        sent += i
+
+    # check the string for a happy or sad face
+    if '-)' in sent:
+        num_happy += 1
+    elif '-(' in sent:
+        num_sad += 1
         
+    
+        
+# outputs
+if num_happy == 0 and num_sad == 0:
+    print('none')
+elif num_happy == num_sad:
+    print('unsure')
+elif num_happy > num_sad:
+    print("happy")
+elif num_happy < num_sad:
+    print('sad')
