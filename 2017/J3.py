@@ -21,9 +21,10 @@ while x < len(dest_coords):
 d_between = abs(starting_coords[0] - dest_coords[0]) + abs(starting_coords[1] - dest_coords[1])
 
 
-# when their difference is divisible by 2 you can go back and forth
-# to land on the answer
-if (charge - d_between) % 2 == 0:
+# when their difference is divisible by 2  and positive you can go
+# back and forth to land on the answer
+if (charge - d_between) % 2 == 0 and charge - d_between >= 0:
     print("Y")
 else:
     print("N")
+
