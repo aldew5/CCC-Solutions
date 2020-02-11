@@ -31,7 +31,8 @@ while x < len(pal) - 1:
             y = 1
             # finding the largest palindrome
             while (x + 1 + y) < len(pal):
-                if pal[x - y] == pal[x + y + 1]:
+                # the digits after the two digit middle are the same
+                if pal[x - y] == pal[x + y + 1] and (x-y) >= 0:
                     ans = (2 * y) + 2
                     lengths.append(ans)
                     y +=1
@@ -40,4 +41,9 @@ while x < len(pal) - 1:
         x += 1
 
 # returning the answer which is the greatest length found
-print(max(lengths))
+if len(lengths) != 0:
+    print(max(lengths))
+else:
+    print(1)
+
+
