@@ -40,10 +40,21 @@ while x < len(pal) - 1:
                     break
         x += 1
 
+#check the list for pals of length two
+if len(lengths) == 0:
+            
+    for i in range(len(pal)):
+        # if two of the same letters are beside each other
+        if (i+1) < len(pal):
+            if pal[i] == pal[i +1]:
+                lengths.append(2)
+
+
 # returning the answer which is the greatest length found
 if len(lengths) != 0:
     print(max(lengths))
 else:
     print(1)
+
 
 
