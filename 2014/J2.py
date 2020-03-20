@@ -1,5 +1,5 @@
 # Alec Dewulf
-# J2 2014
+# "Vote Count" J2 2014
 
 num_votes = int(input())
 votes = list(input())
