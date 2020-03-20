@@ -1,5 +1,7 @@
 /*
  Alec Dewulf
+ "Vote Count" J2 2014
+ March 19, 2020
  
  This solution demonstrates the need to read a blank line after integer input.  
  This is because nextInt doesn't read the newline character of the input
