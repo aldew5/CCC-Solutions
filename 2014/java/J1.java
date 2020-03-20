@@ -1,3 +1,8 @@
+/*
+Alec Dewulf
+"Triangle Times" J1 2014
+March 18, 2020
+*/
 import java.util.Scanner;
 
 public class Main {
