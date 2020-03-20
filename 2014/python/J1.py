@@ -1,5 +1,5 @@
 # Alec Dewulf
-# J1 2014
+# "Triangle Times" J1 2014
 
 a1 = int(input())
 a2 = int(input())
