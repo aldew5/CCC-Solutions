@@ -1,3 +1,6 @@
+# Alec Dewulf
+# "Assigning Partners" J5 2014
+
 num_students = int(input())
 n1 = input().split()
 n2 = input().split()
